@@ -60,6 +60,26 @@ namespace Microsoft.Agents.A365.Observability.Runtime.Tracing.Scopes
         /// </summary>
         public const string ApplyGuardrailOperationName = "apply_guardrail";
 
+        /// <summary>
+        /// The operation name value for invoke_agent spans.
+        /// </summary>
+        public const string InvokeAgentOperationName = "invoke_agent";
+
+        /// <summary>
+        /// The operation name value for execute_tool spans.
+        /// </summary>
+        public const string ExecuteToolOperationName = "execute_tool";
+
+        /// <summary>
+        /// The operation name value for output_messages spans.
+        /// </summary>
+        public const string OutputMessagesOperationName = "output_messages";
+
+        /// <summary>
+        /// The operation name value for chat/inference spans.
+        /// </summary>
+        public const string ChatOperationName = "chat";
+
         // Channel dimensions (renamed from gen_ai.channel.* to microsoft.channel.*)
         public const string ChannelNameKey = "microsoft.channel.name";
         public const string ChannelLinkKey = "microsoft.channel.link";
@@ -110,7 +130,20 @@ namespace Microsoft.Agents.A365.Observability.Runtime.Tracing.Scopes
         ///  The GenAI operation name key.
         /// </summary>
         public const string GenAiOperationNameKey = "gen_ai.operation.name";
-        
+
+        /// <summary>
+        /// The set of recognized genAI operation names used to identify A365-exportable spans.
+        /// Comparison is case-insensitive.
+        /// </summary>
+        internal static readonly HashSet<string> GenAiOperationNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+        {
+            InvokeAgentOperationName,
+            ExecuteToolOperationName,
+            OutputMessagesOperationName,
+            ApplyGuardrailOperationName,
+            ChatOperationName,
+        };
+
         /// <summary>
         /// The error message key.
         /// </summary>
