@@ -143,6 +143,8 @@ Microsoft.Agents.A365.Observability.Runtime.DTOs.Builders.ApplyGuardrailDataBuil
 Microsoft.Agents.A365.Observability.Runtime.DTOs.Builders.ApplyGuardrailDataBuilder.ApplyGuardrailDataBuilder() -> void
 Microsoft.Agents.A365.Observability.Runtime.Tracing.Scopes.OpenTelemetryScope.AddEvent(System.Diagnostics.ActivityEvent activityEvent) -> void
 static Microsoft.Agents.A365.Observability.Runtime.DTOs.Builders.BaseDataBuilder<T>.AddSdkAttributes(System.Collections.Generic.IDictionary<string!, object?>! attributes) -> void
+Microsoft.Agents.A365.Observability.Runtime.Common.BaggageBuilder.CustomAttribute(string! key, string? value) -> Microsoft.Agents.A365.Observability.Runtime.Common.BaggageBuilder!
+Microsoft.Agents.A365.Observability.Runtime.Common.BaggageBuilder.CustomAttributes(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, object?>>! pairs) -> Microsoft.Agents.A365.Observability.Runtime.Common.BaggageBuilder!
 static Microsoft.Agents.A365.Observability.Runtime.DTOs.Builders.BaseDataBuilder<T>.AddRequestParameters(System.Collections.Generic.IDictionary<string!, object?>! attributes, Microsoft.Agents.A365.Observability.Runtime.Tracing.Contracts.GenAiRequestParameters? requestParameters) -> void
 static Microsoft.Agents.A365.Observability.Runtime.DTOs.Builders.BaseDataBuilder<T>.AddResponseParameters(System.Collections.Generic.IDictionary<string!, object?>! attributes, Microsoft.Agents.A365.Observability.Runtime.Tracing.Contracts.GenAiResponseParameters? responseParameters) -> void
 Microsoft.Agents.A365.Observability.Runtime.Tracing.Contracts.GenAiRequestParameters

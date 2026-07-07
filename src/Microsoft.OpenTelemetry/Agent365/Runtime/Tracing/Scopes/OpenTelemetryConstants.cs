@@ -20,6 +20,13 @@ namespace Microsoft.Agents.A365.Observability.Runtime.Tracing.Scopes
         public const string SessionDescriptionKey = "microsoft.session.description";
         public const string TenantIdKey = "microsoft.tenant.id";
 
+        /// <summary>
+        /// Reserved baggage entry that holds the comma-separated list of custom baggage keys
+        /// (set via <c>BaggageBuilder.CustomAttribute</c>) that must be coalesced onto every
+        /// GenAI span, in addition to the curated allowlist.
+        /// </summary>
+        public const string CustomBaggageKeysKey = "_internal.custom_keys";
+
         public const string GenAiClientOperationDurationMetricName = "gen_ai.client.operation.duration";
         public const string GenAiRequestModelKey = "gen_ai.request.model";
         public const string GenAiResponseFinishReasonsKey = "gen_ai.response.finish_reasons";
@@ -196,11 +203,6 @@ namespace Microsoft.Agents.A365.Observability.Runtime.Tracing.Scopes
         /// The GenAI tool type key.
         /// </summary>
         public const string GenAiToolTypeKey = "gen_ai.tool.type";
-
-        /// <summary>
-        /// The GenAI tool server name key.
-        /// </summary>
-        public const string GenAiToolServerNameKey = "gen_ai.tool.server.name";
 
         /// <summary>
         /// The GenAI tool call result key.
